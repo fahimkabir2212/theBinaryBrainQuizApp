@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "50884060135",
+    "project_id": "the-binary-brain-quiz-app",
+    "storage_bucket": "the-binary-brain-quiz-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:50884060135:android:d81a9277f68703d095d342",
+        "android_client_info": {
+          "package_name": "com.example.thebinarybrain_quizapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "50884060135-skk3u7i64n7fnqd0mb16rfuar3e4i1nf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnyLGfjh5i_Ix6Y3omAT9tYBVKwmPj1LQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "50884060135-skk3u7i64n7fnqd0mb16rfuar3e4i1nf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
