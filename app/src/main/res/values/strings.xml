@@ -3,4 +3,9 @@
     <string name="login">Login</string>
     <string name="Email">email</string>
     <string name="welcomeback">Welcome Back</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="btn_login">Log in</string>
+    <string name="no_acc">Don\'t have an account?</string>
+    <string name="signup">Sign Up</string>
 </resources>
