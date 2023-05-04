@@ -64,10 +64,16 @@ public class Login extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()){
-                                    Toast.makeText(Login.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                                    Intent intent= new Intent(Login.this,HomePage.class);
-                                    startActivity(intent);
-                                    finish();
+
+                                    if (firebaseAuth.getCurrentUser().isEmailVerified()){
+                                        Toast.makeText(Login.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                                        Intent intent= new Intent(Login.this,HomePage.class);
+                                        startActivity(intent);
+                                        finish();
+                                    }
+                                    else {
+                                        Toast.makeText(Login.this, "Please varify your email", Toast.LENGTH_SHORT).show();
+                                    }
                                 }
                                 else {
                                     Toast.makeText(Login.this, "Authentication Failed", Toast.LENGTH_SHORT).show();

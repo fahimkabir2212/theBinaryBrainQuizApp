@@ -65,10 +65,21 @@ public class Registration extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()){
-                                    Toast.makeText(Registration.this, "Registration Successful", Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(Registration.this,Login.class);
-                                    startActivity(intent);
-                                    finish();
+
+                                    firebaseAuth.getCurrentUser().sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<Void> task) {
+                                            if(task.isSuccessful()){
+                                                Toast.makeText(Registration.this, "User registration is Successful, please varify your email", Toast.LENGTH_SHORT).show();
+                                                Intent intent = new Intent(Registration.this,Login.class);
+                                                startActivity(intent);
+                                                finish();
+                                            }
+                                            else {
+                                                Toast.makeText(Registration.this, "Registration Failed", Toast.LENGTH_SHORT).show();
+                                            }
+                                        }
+                                    });
                                 }
                                 else {
                                     Toast.makeText(Registration.this, "Registration Failed", Toast.LENGTH_SHORT).show();
