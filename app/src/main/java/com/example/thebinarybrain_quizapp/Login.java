@@ -35,7 +35,7 @@ public class Login extends AppCompatActivity {
         logIn =findViewById(R.id.btnLogIn);
         signUp = findViewById(R.id.btnSignUp);
 
-        //when the user will click on Signup it will take the user to another activity
+        //when the user will click on Signup it will take the user to register activity
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
